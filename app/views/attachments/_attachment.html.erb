@@ -1,0 +1,7 @@
+<tr>
+  <td><%= image_tag attachment.image.url(:thumb) %></td>
+  <td><%= attachment.name %></td>
+  <td><%= link_to 'Show', attachment %></td>
+  <td><%= link_to 'Edit', edit_attachment_path(attachment) %></td>
+  <td><%= link_to 'Destroy', attachment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>

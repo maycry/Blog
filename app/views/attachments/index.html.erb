@@ -1,0 +1,24 @@
+<h1>Listing attachments</h1>
+
+<table id="attachments">
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @attachments.each do |attachment| %>
+  <%= render attachment %>
+<% end %>
+</table>
+
+<br />
+
+
+<%= form_for Attachment.new do |f| %>
+  <%= f.label :image, "Upload paintings" %>
+  <%= f.file_field :image, multiple: true, name: "attachment[image]" %>
+<% end %>
+
+
